@@ -64,10 +64,10 @@ while correcto and n_pregunta < 3*p_level:
         
         respuesta = input('Escoja la alternativa correcta:\n> ').lower()
         # 7. Validar la respuesta entregada
-        opciones_validas = [str(i) for i in range(len(alternativas))]
+        opciones_validas = ["a","b","c","d"]
         respuesta = validate(opciones_validas,respuesta)
         # 8. Verificar si la respuesta es correcta o no
-        correcto = verificar({'enunciado': enunciado, 'alternativas': alternativas}, int(respuesta))
+        correcto = verificar({'enunciado': enunciado, 'alternativas': alternativas}, respuesta)
         
         if correcto and n_pregunta < 3*p_level:
             print('Muy bien sigue así!')
@@ -77,7 +77,7 @@ while correcto and n_pregunta < 3*p_level:
             os.system(op_sys)
         elif correcto and n_pregunta == 3*p_level:
             print(f'Felicitaciones, Has respondido {3*p_level} preguntas correctas. \n Has ganado la Trivia \n Gracias por Jugar, hasta luego!!!')
-            time.sleep(3)
+            time.sleep(6)
             os.system(op_sys)
         else: 
             print(f'Lo siento, conseguiste {n_pregunta - 1} respuestas correctas,\n Sigue participando!!')
@@ -89,3 +89,4 @@ while correcto and n_pregunta < 3*p_level:
         exit()
             
             
+
