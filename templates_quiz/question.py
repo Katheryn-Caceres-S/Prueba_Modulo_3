@@ -14,15 +14,16 @@ def choose_q(dificultad):
     preguntas = p.pool_preguntas[dificultad]
     
     # usar opciones desde ambiente global
-#    global 
+    global opciones
     # escoger una pregunta
     n_elegido = random.choice(opciones[dificultad])
     # eliminarla del ambiente global para no escogerla de nuevo
-    opciones[dificultad.remove(n_elegido)]
+    opciones[dificultad].remove(n_elegido)
     
     
     # escoger enunciado y alternativas mezcladas
-    pregunta =  preguntas[n_elegido]
+    cambio = f"pregunta_{n_elegido}"
+    pregunta =  preguntas[cambio]
     alternativas = shuffle_alt(pregunta['alternativas'])
     
     
