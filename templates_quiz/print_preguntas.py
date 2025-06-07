@@ -4,6 +4,14 @@ def print_pregunta(enunciado, alternativas):
     
     # Imprimir enunciado y alternativas
     ###############################################################
+
+    print("""
+A. Alternativa 1
+B. Alternativa 2
+C. Alternativa 3
+D. Alternativa 4
+
+""")
     pass
     
     
